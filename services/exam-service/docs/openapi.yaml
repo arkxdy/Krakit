@@ -1,0 +1,525 @@
+openapi: 3.0.3
+info:
+  title: Exam Platform API
+  version: 1.0.0
+  description: Production-ready API contract for Admin and User apps
+
+servers:
+  - url: http://localhost:8080/api/v1
+
+security:
+  - bearerAuth: []
+
+tags:
+  - name: Admin
+  - name: User
+  - name: Internal
+
+paths:
+
+  # =========================
+  # ADMIN - SUBJECTS
+  # =========================
+  /admin/subjects:
+    post:
+      tags: [Admin]
+      summary: Create subject
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateSubject'
+      responses:
+        "200":
+          description: Subject created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Subject'
+
+    get:
+      tags: [Admin]
+      summary: List subjects
+      responses:
+        "200":
+          description: List subjects
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Subject'
+
+  # =========================
+  # ADMIN - EXAMS
+  # =========================
+  /admin/exams:
+    post:
+      tags: [Admin]
+      summary: Create exam
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateExam'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Exam'
+
+    get:
+      tags: [Admin]
+      summary: List exams
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Exam'
+
+  /admin/exams/{exam_id}:
+    put:
+      tags: [Admin]
+      summary: Update exam
+      parameters:
+        - $ref: '#/components/parameters/ExamId'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateExam'
+      responses:
+        "200":
+          description: Updated
+
+    delete:
+      tags: [Admin]
+      summary: Disable exam
+      parameters:
+        - $ref: '#/components/parameters/ExamId'
+      responses:
+        "200":
+          description: Disabled
+
+  # =========================
+  # SETTINGS
+  # =========================
+  /admin/exams/{exam_id}/settings:
+    post:
+      tags: [Admin]
+      summary: Upsert exam settings
+      parameters:
+        - $ref: '#/components/parameters/ExamId'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExamSettings'
+      responses:
+        "200":
+          description: Saved
+
+  /admin/exams/{exam_id}/publish:
+    post:
+      tags: [Admin]
+      summary: Publish exam
+      parameters:
+        - $ref: '#/components/parameters/ExamId'
+      responses:
+        "200":
+          description: Published
+
+  # =========================
+  # SECTIONS
+  # =========================
+  /admin/exams/{exam_id}/sections:
+    post:
+      tags: [Admin]
+      summary: Create section
+      parameters:
+        - $ref: '#/components/parameters/ExamId'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateSection'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Section'
+
+    get:
+      tags: [Admin]
+      summary: List sections
+      parameters:
+        - $ref: '#/components/parameters/ExamId'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Section'
+
+  /admin/sections/{section_id}:
+    put:
+      tags: [Admin]
+      summary: Update section
+      parameters:
+        - $ref: '#/components/parameters/SectionId'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateSection'
+      responses:
+        "200":
+          description: Updated
+
+  # =========================
+  # QUESTION SETS
+  # =========================
+  /admin/sections/{section_id}/question-sets:
+    post:
+      tags: [Admin]
+      summary: Create question set mapping
+      parameters:
+        - $ref: '#/components/parameters/SectionId'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateQuestionSet'
+      responses:
+        "200":
+          description: Created
+
+  /admin/exams/{exam_id}/question-sets:
+    get:
+      tags: [Admin]
+      summary: List question sets
+      parameters:
+        - $ref: '#/components/parameters/ExamId'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/QuestionSet'
+
+  # =========================
+  # QUESTIONS (MONGO)
+  # =========================
+  /admin/questions:
+    post:
+      tags: [Admin]
+      summary: Create question
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Question'
+      responses:
+        "200":
+          description: Created
+
+  /admin/passages:
+    post:
+      tags: [Admin]
+      summary: Create passage
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Passage'
+      responses:
+        "200":
+          description: Created
+
+  # =========================
+  # USER APIs
+  # =========================
+  /exams:
+    get:
+      tags: [User]
+      summary: List available exams
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Exam'
+
+  /exams/{exam_id}:
+    get:
+      tags: [User]
+      summary: Get exam details
+      parameters:
+        - $ref: '#/components/parameters/ExamId'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExamDetail'
+
+  # =========================
+  # ATTEMPTS
+  # =========================
+  /attempts:
+    post:
+      tags: [User]
+      summary: Start attempt
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateAttempt'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Attempt'
+
+  /attempts/{attempt_id}/questions:
+    get:
+      tags: [User]
+      summary: Get attempt questions
+      parameters:
+        - $ref: '#/components/parameters/AttemptId'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AttemptQuestions'
+
+  /attempts/{attempt_id}/answers:
+    post:
+      tags: [User]
+      summary: Save answer
+      parameters:
+        - $ref: '#/components/parameters/AttemptId'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Answer'
+      responses:
+        "200":
+          description: Saved
+
+    get:
+      tags: [User]
+      summary: Get answers
+      parameters:
+        - $ref: '#/components/parameters/AttemptId'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Answer'
+
+  /attempts/{attempt_id}/submit:
+    post:
+      tags: [User]
+      summary: Submit attempt
+      parameters:
+        - $ref: '#/components/parameters/AttemptId'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Result'
+
+  /attempts/{attempt_id}/result:
+    get:
+      tags: [User]
+      summary: Get result
+      parameters:
+        - $ref: '#/components/parameters/AttemptId'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Result'
+
+components:
+
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+
+  parameters:
+    ExamId:
+      name: exam_id
+      in: path
+      required: true
+      schema:
+        type: string
+
+    SectionId:
+      name: section_id
+      in: path
+      required: true
+      schema:
+        type: string
+
+    AttemptId:
+      name: attempt_id
+      in: path
+      required: true
+      schema:
+        type: string
+
+  schemas:
+
+    CreateSubject:
+      type: object
+      required: [name]
+      properties:
+        name:
+          type: string
+        description:
+          type: string
+
+    Subject:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+
+    CreateExam:
+      type: object
+      required: [name, exam_type, duration_minutes, total_marks]
+      properties:
+        name:
+          type: string
+        exam_type:
+          type: string
+        duration_minutes:
+          type: integer
+        total_marks:
+          type: integer
+
+    Exam:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        exam_type:
+          type: string
+        duration_minutes:
+          type: integer
+        total_marks:
+          type: integer
+
+    Section:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        order_index:
+          type: integer
+
+    QuestionSet:
+      type: object
+      properties:
+        id:
+          type: string
+        question_set_id:
+          type: string
+        question_count:
+          type: integer
+
+    Attempt:
+      type: object
+      properties:
+        attempt_id:
+          type: string
+        status:
+          type: string
+
+    CreateAttempt:
+      type: object
+      properties:
+        exam_id:
+          type: string
+
+    Answer:
+      type: object
+      properties:
+        question_id:
+          type: string
+        selected_answer:
+          type: array
+          items:
+            type: string
+
+    AttemptQuestions:
+      type: object
+      properties:
+        sections:
+          type: array
+          items:
+            type: object
+            properties:
+              section_id:
+                type: string
+              name:
+                type: string
+              questions:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    question_id:
+                      type: string
+                    question_text:
+                      type: string
+                    options:
+                      type: array
+                      items:
+                        type: object
+
+    Result:
+      type: object
+      properties:
+        total_score:
+          type: number
+        sections:
+          type: array
+          items:
+            type: object
+            properties:
+              section_id:
+                type: string
+              score:
+                type: number
