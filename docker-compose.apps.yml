@@ -1,0 +1,8 @@
+services:
+  auth-service:
+    build: ./services/auth-service
+    environment:
+      - DB_HOST=auth-db  # Container name
+      - DB_PORT=5432     # Internal port
+      - KAFKA_HOST=kafka
+      - KAFKA_PORT=9092

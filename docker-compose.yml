@@ -1,0 +1,13 @@
+include:
+  - infra/docker-compose.infra.yml
+  - apps/docker-compose.apps.yml
+
+services:
+  # You can add the Gateway here, as it "links" everything together
+  gateway:
+    build: ./gateway
+    ports:
+      - "80:80"
+    depends_on:
+      - auth-service
+      - exam-service
