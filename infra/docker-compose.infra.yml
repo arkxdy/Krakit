@@ -1,0 +1,60 @@
+services:
+  auth-db:
+    image: postgres:15-alpine
+    container_name: krakit-auth-db
+    environment:
+      POSTGRES_DB: ${AUTH_DB_NAME}
+      POSTGRES_USER: ${AUTH_DB_USER}
+      POSTGRES_PASSWORD: ${AUTH_DB_PASSWORD}
+    volumes:
+      - ./postgres/init-auth.sql:/docker-entrypoint-initdb.d/init.sql
+    ports: ["5432:5432"]
+
+  exam-db:
+    image: postgres:15-alpine
+    container_name: krakit-exam-db
+    environment:
+      POSTGRES_DB: ${EXAM_DB_NAME}
+      POSTGRES_USER: ${EXAM_DB_USER}
+      POSTGRES_PASSWORD: ${EXAM_DB_PASSWORD}
+    volumes:
+      - ./postgres/init-exam.sql:/docker-entrypoint-initdb.d/init.sql
+    ports: ["5433:5432"]
+
+  mongo-db:
+    image: mongo:latest
+    container_name: krakit-mongo
+    ports: ["27017:27017"]
+
+  kafka:
+    image: bitnami/kafka:3.7
+    container_name: krakit-kafka
+    environment:
+      - KAFKA_CFG_NODE_ID=1
+      - KAFKA_CFG_PROCESS_ROLES=controller,broker
+      - KAFKA_CFG_CONTROLLER_QUORUM_VOTERS=1@kafka:9093
+      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092,CONTROLLER://:9093,EXTERNAL://:29092
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092,EXTERNAL://localhost:29092
+      - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT
+      - KAFKA_CFG_CONTROLLER_LISTENER_NAMES=CONTROLLER
+      - KAFKA_CFG_INTER_BROKER_LISTENER_NAME=PLAINTEXT
+    ports:
+      - "9092:9092"
+      - "29092:29092"
+
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: krakit-kafka-ui
+    ports: ["8080:8080"]
+    environment:
+      KAFKA_CLUSTERS_0_NAME: local
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
+
+  minio:
+    image: minio/minio
+    container_name: krakit-minio
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ACCESS_KEY}
+      MINIO_ROOT_PASSWORD: ${MINIO_SECRET_KEY}
+    ports: ["9000:9000", "9001:9001"]
+    command: server /data --console-address ":9001"
