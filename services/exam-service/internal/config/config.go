@@ -6,9 +6,21 @@ import (
 )
 
 type Config struct {
-	Port        string
-	DatabaseURL string
-	KafkaBroker string
+	Port               string
+	DatabaseURL        string
+	KafkaBroker        string
+	MongoURL           string
+	RedisURL           string
+	Minio              MinioConfig
+	AuthServiceJWKSURL string
+}
+
+type MinioConfig struct {
+	Endpoint  string
+	AccessKey string
+	SecretKey string
+	Bucket    string
+	UseSSL    bool
 }
 
 func LoadConfig() *Config {
@@ -30,6 +42,31 @@ func LoadConfig() *Config {
 			getEnv("KAFKA_HOST", "localhost"),
 			getEnv("KAFKA_PORT", "29092"),
 		),
+
+		// For Mongo
+		MongoURL: fmt.Sprintf("mongodb://%s:%s@%s:%s",
+			getEnv("MONGO_USER", "admin"),
+			getEnv("MONGO_PASS", "password"),
+			getEnv("MONGO_HOST", "localhost"),
+			getEnv("MONGO_PORT", "27017"),
+		),
+
+		// For Redis
+		RedisURL: fmt.Sprintf("redis://%s:%s",
+			getEnv("REDIS_HOST", "localhost"),
+			getEnv("REDIS_PORT", "6379"),
+		),
+
+		// For Minio
+		Minio: MinioConfig{
+			Endpoint:  getEnv("MINIO_ENDPOINT", "localhost:9000"),
+			AccessKey: getEnv("MINIO_ACCESS_KEY", "minioadmin"),
+			SecretKey: getEnv("MINIO_SECRET_KEY", "minioadmin"),
+			Bucket:    getEnv("MINIO_BUCKET", "exams"),
+			UseSSL:    getEnv("MINIO_USE_SSL", "false") == "true",
+		},
+
+		AuthServiceJWKSURL: getEnv("AUTH_SERVICE_JWKS", "hhttp://localhost:8081/api/v1/.well-known/jwks.json"),
 	}
 }
 

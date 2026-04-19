@@ -5,8 +5,6 @@ import (
 	"log"
 	"time"
 
-	"github.com/krakit/exam-service/internal/config"
-
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 
@@ -14,12 +12,12 @@ type PostgresClient struct {
 	Pool *pgxpool.Pool
 }
 
-func NewPostgresClient(cfg *config.Config) (*PostgresClient, error) {
+func connectPostgres(url string) (*PostgresClient, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
 	// Parse the connection string from our config utility
-	dbConfig, err := pgxpool.ParseConfig(cfg.DatabaseURL)
+	dbConfig, err := pgxpool.ParseConfig(url)
 	if err != nil {
 		return nil, err
 	}
