@@ -1,13 +1,21 @@
-include:
-  - infra/docker-compose.infra.yml
-  - apps/docker-compose.apps.yml
+# Krakit local stack
+# Usage:
+#   docker compose up -d                  # infra only-friendly: start everything defined
+#   docker compose up -d --build          # rebuild and start services
+#   make infra                            # infra dependencies only
+#
+# See CONTRIBUTING.md for full setup.
 
-services:
-  # You can add the Gateway here, as it "links" everything together
-  gateway:
-    build: ./gateway
-    ports:
-      - "80:80"
-    depends_on:
-      - auth-service
-      - exam-service
+include:
+  - path: infra/docker-compose.infra.yml
+  - path: services/docker-compose.services.yml
+
+# Gateway (API edge) can be added here when ready:
+# services:
+#   gateway:
+#     build: ./gateway
+#     ports:
+#       - "80:80"
+#     depends_on:
+#       - auth-service
+#       - exam-service

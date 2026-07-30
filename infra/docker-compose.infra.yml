@@ -1,60 +1,144 @@
+# Infrastructure dependencies (Postgres, Mongo, Redis, Kafka, MinIO)
+# Paths are relative to this file (infra/).
+
 services:
   auth-db:
     image: postgres:15-alpine
     container_name: krakit-auth-db
+    restart: unless-stopped
     environment:
-      POSTGRES_DB: ${AUTH_DB_NAME}
-      POSTGRES_USER: ${AUTH_DB_USER}
-      POSTGRES_PASSWORD: ${AUTH_DB_PASSWORD}
+      POSTGRES_DB: ${AUTH_DB_NAME:-auth_db}
+      POSTGRES_USER: ${AUTH_DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${AUTH_DB_PASSWORD:-password}
     volumes:
-      - ./postgres/init-auth.sql:/docker-entrypoint-initdb.d/init.sql
-    ports: ["5432:5432"]
+      - auth_db_data:/var/lib/postgresql/data
+      - ./auth:/docker-entrypoint-initdb.d
+    ports:
+      - "${AUTH_DB_PORT:-5432}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${AUTH_DB_USER:-postgres} -d ${AUTH_DB_NAME:-auth_db}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
 
   exam-db:
     image: postgres:15-alpine
     container_name: krakit-exam-db
+    restart: unless-stopped
     environment:
-      POSTGRES_DB: ${EXAM_DB_NAME}
-      POSTGRES_USER: ${EXAM_DB_USER}
-      POSTGRES_PASSWORD: ${EXAM_DB_PASSWORD}
+      POSTGRES_DB: ${EXAM_DB_NAME:-exam_db}
+      POSTGRES_USER: ${EXAM_DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${EXAM_DB_PASSWORD:-password}
     volumes:
-      - ./postgres/init-exam.sql:/docker-entrypoint-initdb.d/init.sql
-    ports: ["5433:5432"]
+      - exam_db_data:/var/lib/postgresql/data
+      - ./exam:/docker-entrypoint-initdb.d
+    ports:
+      - "${EXAM_DB_PORT:-5433}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${EXAM_DB_USER:-postgres} -d ${EXAM_DB_NAME:-exam_db}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
 
   mongo-db:
-    image: mongo:latest
+    image: mongo:7
     container_name: krakit-mongo
-    ports: ["27017:27017"]
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER:-admin}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASS:-password}
+      MONGO_INITDB_DATABASE: ${MONGO_DB:-krakit-question}
+    volumes:
+      - mongo_data:/data/db
+      - ./question:/docker-entrypoint-initdb.d
+    ports:
+      - "${MONGO_PORT:-27017}:27017"
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "mongosh -u $$MONGO_INITDB_ROOT_USERNAME -p $$MONGO_INITDB_ROOT_PASSWORD --authenticationDatabase admin --quiet --eval \"db.adminCommand('ping')\"",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  auth-cache:
+    image: redis:6.2-alpine
+    container_name: krakit-auth-cache
+    restart: unless-stopped
+    command: >
+      redis-server
+      --save 20 1
+      --loglevel warning
+      --requirepass ${REDIS_PASSWORD:-password}
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - auth_cache_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "${REDIS_PASSWORD:-password}", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
 
   kafka:
     image: bitnami/kafka:3.7
     container_name: krakit-kafka
+    restart: unless-stopped
     environment:
-      - KAFKA_CFG_NODE_ID=1
-      - KAFKA_CFG_PROCESS_ROLES=controller,broker
-      - KAFKA_CFG_CONTROLLER_QUORUM_VOTERS=1@kafka:9093
-      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092,CONTROLLER://:9093,EXTERNAL://:29092
-      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092,EXTERNAL://localhost:29092
-      - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT
-      - KAFKA_CFG_CONTROLLER_LISTENER_NAMES=CONTROLLER
-      - KAFKA_CFG_INTER_BROKER_LISTENER_NAME=PLAINTEXT
+      KAFKA_CFG_NODE_ID: 1
+      KAFKA_CFG_PROCESS_ROLES: controller,broker
+      KAFKA_CFG_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_CFG_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093,EXTERNAL://:29092
+      KAFKA_CFG_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,EXTERNAL://localhost:29092
+      KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT
+      KAFKA_CFG_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_CFG_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_CFG_AUTO_CREATE_TOPICS_ENABLE: "true"
     ports:
       - "9092:9092"
       - "29092:29092"
+    volumes:
+      - kafka_data:/bitnami/kafka
+    healthcheck:
+      test: ["CMD-SHELL", "kafka-topics.sh --bootstrap-server localhost:9092 --list || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
 
   kafka-ui:
     image: provectuslabs/kafka-ui:latest
     container_name: krakit-kafka-ui
-    ports: ["8080:8080"]
+    restart: unless-stopped
+    depends_on:
+      kafka:
+        condition: service_started
+    ports:
+      - "${KAFKA_UI_PORT:-8080}:8080"
     environment:
       KAFKA_CLUSTERS_0_NAME: local
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
 
   minio:
-    image: minio/minio
+    image: minio/minio:latest
     container_name: krakit-minio
+    restart: unless-stopped
     environment:
-      MINIO_ROOT_USER: ${MINIO_ACCESS_KEY}
-      MINIO_ROOT_PASSWORD: ${MINIO_SECRET_KEY}
-    ports: ["9000:9000", "9001:9001"]
+      MINIO_ROOT_USER: ${MINIO_ACCESS_KEY:-minioadmin}
+      MINIO_ROOT_PASSWORD: ${MINIO_SECRET_KEY:-minioadmin}
+    ports:
+      - "${MINIO_API_PORT:-9000}:9000"
+      - "${MINIO_CONSOLE_PORT:-9001}:9001"
+    volumes:
+      - minio_data:/data
     command: server /data --console-address ":9001"
+
+volumes:
+  auth_db_data:
+  exam_db_data:
+  mongo_data:
+  auth_cache_data:
+  kafka_data:
+  minio_data:
