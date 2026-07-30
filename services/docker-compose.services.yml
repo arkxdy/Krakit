@@ -1,0 +1,76 @@
+# Application services
+# Paths are relative to this file (services/).
+
+services:
+  auth-service:
+    build:
+      context: ./auth-service
+      dockerfile: Dockerfile
+    container_name: krakit-auth-service
+    restart: unless-stopped
+    depends_on:
+      auth-db:
+        condition: service_healthy
+      auth-cache:
+        condition: service_healthy
+    environment:
+      AUTH_SERVICE_PORT: ${AUTH_SERVICE_PORT:-8081}
+      DB_HOST: auth-db
+      DB_PORT: "5432"
+      DB_USER: ${AUTH_DB_USER:-postgres}
+      DB_PASSWORD: ${AUTH_DB_PASSWORD:-password}
+      DB_NAME: ${AUTH_DB_NAME:-auth_db}
+      DB_SSL_MODE: disable
+      REDIS_HOST: auth-cache
+      REDIS_PORT: "6379"
+      REDIS_PASSWORD: ${REDIS_PASSWORD:-password}
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID:-}
+      TOKEN_SECRET: ${TOKEN_SECRET:-dev-token-secret-change-me}
+      TOKEN_DURATION: ${TOKEN_DURATION:-15}
+    ports:
+      - "${AUTH_SERVICE_PORT:-8081}:8081"
+
+  exam-service:
+    build:
+      context: ./exam-service
+      dockerfile: Dockerfile
+    container_name: krakit-exam-service
+    restart: unless-stopped
+    depends_on:
+      exam-db:
+        condition: service_healthy
+      mongo-db:
+        condition: service_healthy
+      auth-cache:
+        condition: service_healthy
+      kafka:
+        condition: service_started
+      minio:
+        condition: service_started
+      auth-service:
+        condition: service_started
+    environment:
+      PORT: ${EXAM_SERVICE_PORT:-8082}
+      DB_HOST: exam-db
+      DB_PORT: "5432"
+      DB_USER: ${EXAM_DB_USER:-postgres}
+      DB_PASSWORD: ${EXAM_DB_PASSWORD:-password}
+      DB_NAME: ${EXAM_DB_NAME:-exam_db}
+      KAFKA_HOST: kafka
+      KAFKA_PORT: "9092"
+      MONGO_HOST: mongo-db
+      MONGO_PORT: "27017"
+      MONGO_USER: ${MONGO_USER:-admin}
+      MONGO_PASS: ${MONGO_PASS:-password}
+      MONGO_DB: ${MONGO_DB:-krakit-question}
+      REDIS_HOST: auth-cache
+      REDIS_PORT: "6379"
+      REDIS_PASSWORD: ${REDIS_PASSWORD:-password}
+      MINIO_ENDPOINT: minio:9000
+      MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY:-minioadmin}
+      MINIO_SECRET_KEY: ${MINIO_SECRET_KEY:-minioadmin}
+      MINIO_BUCKET: ${MINIO_BUCKET:-exams}
+      MINIO_USE_SSL: "false"
+      AUTH_SERVICE_JWKS: http://auth-service:8081/api/v1/.well-known/jwks.json
+    ports:
+      - "${EXAM_SERVICE_PORT:-8082}:8082"

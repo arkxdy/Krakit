@@ -125,8 +125,13 @@ func main() {
 		}
 	}
 
-	// 3. Keep service running
-	log.Printf("Exam Service started on port %s", cfg.Port)
+	// 4. Start HTTP server
+	go func() {
+		log.Printf("Exam Service (Gin) running on port %s", cfg.Port)
+		if err := router.Run(":" + cfg.Port); err != nil && err != http.ErrServerClosed {
+			log.Fatalf("Listen Error: %s\n", err)
+		}
+	}()
 
 	// Wait for termination signal (Ctrl+C)
 	stop := make(chan os.Signal, 1)

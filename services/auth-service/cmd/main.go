@@ -118,6 +118,9 @@ func main() {
 
 	//4. Graceful Start
 	port := os.Getenv("AUTH_SERVICE_PORT")
+	if port == "" {
+		port = "8081"
+	}
 	server := &http.Server{
 		Addr:    ":" + port,
 		Handler: router,

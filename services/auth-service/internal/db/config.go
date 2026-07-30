@@ -37,7 +37,7 @@ func NewConfig(dbType DBType) *Config {
 	case PostgreSQL:
 		return &Config{
 			Type:     dbType,
-			Host:     getEnv("DB_HOST", "db"),
+			Host:     getEnv("DB_HOST", "localhost"),
 			Port:     getEnv("DB_PORT", "5432"),
 			User:     getEnv("DB_USER", "postgres"),
 			Password: getEnv("DB_PASSWORD", "password"),
@@ -47,9 +47,9 @@ func NewConfig(dbType DBType) *Config {
 	case Redis:
 		return &Config{
 			Type:     dbType,
-			Host:     getEnv("REDIS_HOST", "redis"),
+			Host:     getEnv("REDIS_HOST", "localhost"),
 			Port:     getEnv("REDIS_PORT", "6379"),
-			Password: getEnv("REDIS_PASSWORD", ""),
+			Password: getEnv("REDIS_PASSWORD", "password"),
 			DBName:   getEnv("REDIS_DB", "0"),
 		}
 	default:
