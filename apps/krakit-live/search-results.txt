@@ -1,0 +1,987 @@
+﻿
+node_modules\@types\react\ts5.0\global.d.ts:42:interface HTMLButtonElement 
+extends HTMLElement {}
+node_modules\@types\react\ts5.0\index.d.ts:1392:     *   type: "submit" | 
+"button";
+node_modules\@types\react\ts5.0\index.d.ts:1395:     * export const 
+FancyButton = forwardRef<HTMLButtonElement, Props>((props, ref) => (
+node_modules\@types\react\ts5.0\index.d.ts:1396:     *   <button ref={ref} 
+className="MyClassName" type={props.type}>
+node_modules\@types\react\ts5.0\index.d.ts:1398:     *   </button>
+node_modules\@types\react\ts5.0\index.d.ts:2147:        button: number;
+node_modules\@types\react\ts5.0\index.d.ts:2148:        buttons: number;
+node_modules\@types\react\ts5.0\index.d.ts:2374:        onClick?: 
+MouseEventHandler<T> | undefined;
+node_modules\@types\react\ts5.0\index.d.ts:2375:        onClickCapture?: 
+MouseEventHandler<T> | undefined;
+node_modules\@types\react\ts5.0\index.d.ts:2511:         * Indicates the 
+current "checked" state of checkboxes, radio buttons, and other widgets.
+node_modules\@types\react\ts5.0\index.d.ts:2637:         * Indicates the 
+current "pressed" state of toggle buttons.
+node_modules\@types\react\ts5.0\index.d.ts:2718:        | "button"
+node_modules\@types\react\ts5.0\index.d.ts:2767:        | "spinbutton"
+node_modules\@types\react\ts5.0\index.d.ts:3051:    interface 
+ButtonHTMLAttributes<T> extends HTMLAttributes<T> {
+node_modules\@types\react\ts5.0\index.d.ts:3066:        type?: "submit" | 
+"reset" | "button" | undefined;
+node_modules\@types\react\ts5.0\index.d.ts:3190:        | "button"
+node_modules\@types\react\ts5.0\index.d.ts:3931:        | "button"
+node_modules\@types\react\ts5.0\index.d.ts:4173:            button: 
+React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, 
+HTMLButtonElement>;
+node_modules\@types\react\global.d.ts:42:interface HTMLButtonElement extends 
+HTMLElement {}
+node_modules\@types\react\index.d.ts:1393:     *   type: "submit" | "button";
+node_modules\@types\react\index.d.ts:1396:     * export const FancyButton = 
+forwardRef<HTMLButtonElement, Props>((props, ref) => (
+node_modules\@types\react\index.d.ts:1397:     *   <button ref={ref} 
+className="MyClassName" type={props.type}>
+node_modules\@types\react\index.d.ts:1399:     *   </button>
+node_modules\@types\react\index.d.ts:2148:        button: number;
+node_modules\@types\react\index.d.ts:2149:        buttons: number;
+node_modules\@types\react\index.d.ts:2375:        onClick?: 
+MouseEventHandler<T> | undefined;
+node_modules\@types\react\index.d.ts:2376:        onClickCapture?: 
+MouseEventHandler<T> | undefined;
+node_modules\@types\react\index.d.ts:2512:         * Indicates the current 
+"checked" state of checkboxes, radio buttons, and other widgets.
+node_modules\@types\react\index.d.ts:2638:         * Indicates the current 
+"pressed" state of toggle buttons.
+node_modules\@types\react\index.d.ts:2719:        | "button"
+node_modules\@types\react\index.d.ts:2768:        | "spinbutton"
+node_modules\@types\react\index.d.ts:3052:    interface 
+ButtonHTMLAttributes<T> extends HTMLAttributes<T> {
+node_modules\@types\react\index.d.ts:3067:        type?: "submit" | "reset" | 
+"button" | undefined;
+node_modules\@types\react\index.d.ts:3191:        | "button"
+node_modules\@types\react\index.d.ts:3932:        | "button"
+node_modules\@types\react\index.d.ts:4186:            button: 
+React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, 
+HTMLButtonElement>;
+node_modules\csstype\index.d.ts:6917:   * **Syntax**: `none | button | 
+button-arrow-down | button-arrow-next | button-arrow-previous | 
+button-arrow-up | button-bevel | button-focus | caret | checkbox | 
+checkbox-container | checkbox-label | checkmenuitem | dualbutton | groupbox | 
+listbox | listitem | menuarrow | menubar | menucheckbox | menuimage | menuitem 
+| menuitemtext | menulist | menulist-button | menulist-text | 
+menulist-textfield | menupopup | menuradio | menuseparator | meterbar | 
+meterchunk | progressbar | progressbar-vertical | progresschunk | 
+progresschunk-vertical | radio | radio-container | radio-label | radiomenuitem 
+| range | range-thumb | resizer | resizerpanel | scale-horizontal | 
+scalethumbend | scalethumb-horizontal | scalethumbstart | scalethumbtick | 
+scalethumb-vertical | scale-vertical | scrollbarbutton-down | 
+scrollbarbutton-left | scrollbarbutton-right | scrollbarbutton-up | 
+scrollbarthumb-horizontal | scrollbarthumb-vertical | 
+scrollbartrack-horizontal | scrollbartrack-vertical | searchfield | separator 
+| sheet | spinner | spinner-downbutton | spinner-textfield | spinner-upbutton 
+| splitter | statusbar | statusbarpanel | tab | tabpanel | tabpanels | 
+tab-scroll-arrow-back | tab-scroll-arrow-forward | textfield | 
+textfield-multiline | toolbar | toolbarbutton | toolbarbutton-dropdown | 
+toolbargripper | toolbox | tooltip | treeheader | treeheadercell | 
+treeheadersortarrow | treeitem | treeline | treetwisty | treetwistyopen | 
+treeview | -moz-mac-unified-toolbar | -moz-win-borderless-glass | 
+-moz-win-browsertabbar-toolbox | -moz-win-communicationstext | 
+-moz-win-communications-toolbox | -moz-win-exclude-glass | -moz-win-glass | 
+-moz-win-mediatext | -moz-win-media-toolbox | -moz-window-button-box | 
+-moz-window-button-box-maximized | -moz-window-button-close | 
+-moz-window-button-maximize | -moz-window-button-minimize | 
+-moz-window-button-restore | -moz-window-frame-bottom | -moz-window-frame-left 
+| -moz-window-frame-right | -moz-window-titlebar | 
+-moz-window-titlebar-maximized`
+node_modules\csstype\index.d.ts:7477:   * **Initial value**: `ButtonText`
+node_modules\csstype\index.d.ts:7731:   * **Syntax**: `none | button | 
+button-bevel | caret | checkbox | default-button | inner-spin-button | listbox 
+| listitem | media-controls-background | media-controls-fullscreen-background 
+| media-current-time-display | media-enter-fullscreen-button | 
+media-exit-fullscreen-button | media-fullscreen-button | media-mute-button | 
+media-overlay-play-button | media-play-button | media-seek-back-button | 
+media-seek-forward-button | media-slider | media-sliderthumb | 
+media-time-remaining-display | media-toggle-closed-captions-button | 
+media-volume-slider | media-volume-slider-container | media-volume-sliderthumb 
+| menulist | menulist-button | menulist-text | menulist-textfield | meter | 
+progress-bar | progress-bar-value | push-button | radio | searchfield | 
+searchfield-cancel-button | searchfield-decoration | 
+searchfield-results-button | searchfield-results-decoration | 
+slider-horizontal | slider-vertical | sliderthumb-horizontal | 
+sliderthumb-vertical | square-button | textarea | textfield | 
+-apple-pay-button`
+node_modules\csstype\index.d.ts:16674:   * **Syntax**: `none | button | 
+button-arrow-down | button-arrow-next | button-arrow-previous | 
+button-arrow-up | button-bevel | button-focus | caret | checkbox | 
+checkbox-container | checkbox-label | checkmenuitem | dualbutton | groupbox | 
+listbox | listitem | menuarrow | menubar | menucheckbox | menuimage | menuitem 
+| menuitemtext | menulist | menulist-button | menulist-text | 
+menulist-textfield | menupopup | menuradio | menuseparator | meterbar | 
+meterchunk | progressbar | progressbar-vertical | progresschunk | 
+progresschunk-vertical | radio | radio-container | radio-label | radiomenuitem 
+| range | range-thumb | resizer | resizerpanel | scale-horizontal | 
+scalethumbend | scalethumb-horizontal | scalethumbstart | scalethumbtick | 
+scalethumb-vertical | scale-vertical | scrollbarbutton-down | 
+scrollbarbutton-left | scrollbarbutton-right | scrollbarbutton-up | 
+scrollbarthumb-horizontal | scrollbarthumb-vertical | 
+scrollbartrack-horizontal | scrollbartrack-vertical | searchfield | separator 
+| sheet | spinner | spinner-downbutton | spinner-textfield | spinner-upbutton 
+| splitter | statusbar | statusbarpanel | tab | tabpanel | tabpanels | 
+tab-scroll-arrow-back | tab-scroll-arrow-forward | textfield | 
+textfield-multiline | toolbar | toolbarbutton | toolbarbutton-dropdown | 
+toolbargripper | toolbox | tooltip | treeheader | treeheadercell | 
+treeheadersortarrow | treeitem | treeline | treetwisty | treetwistyopen | 
+treeview | -moz-mac-unified-toolbar | -moz-win-borderless-glass | 
+-moz-win-browsertabbar-toolbox | -moz-win-communicationstext | 
+-moz-win-communications-toolbox | -moz-win-exclude-glass | -moz-win-glass | 
+-moz-win-mediatext | -moz-win-media-toolbox | -moz-window-button-box | 
+-moz-window-button-box-maximized | -moz-window-button-close | 
+-moz-window-button-maximize | -moz-window-button-minimize | 
+-moz-window-button-restore | -moz-window-frame-bottom | -moz-window-frame-left 
+| -moz-window-frame-right | -moz-window-titlebar | 
+-moz-window-titlebar-maximized`
+node_modules\csstype\index.d.ts:17234:   * **Initial value**: `ButtonText`
+node_modules\csstype\index.d.ts:17488:   * **Syntax**: `none | button | 
+button-bevel | caret | checkbox | default-button | inner-spin-button | listbox 
+| listitem | media-controls-background | media-controls-fullscreen-background 
+| media-current-time-display | media-enter-fullscreen-button | 
+media-exit-fullscreen-button | media-fullscreen-button | media-mute-button | 
+media-overlay-play-button | media-play-button | media-seek-back-button | 
+media-seek-forward-button | media-slider | media-sliderthumb | 
+media-time-remaining-display | media-toggle-closed-captions-button | 
+media-volume-slider | media-volume-slider-container | media-volume-sliderthumb 
+| menulist | menulist-button | menulist-text | menulist-textfield | meter | 
+progress-bar | progress-bar-value | push-button | radio | searchfield | 
+searchfield-cancel-button | searchfield-decoration | 
+searchfield-results-button | searchfield-results-decoration | 
+slider-horizontal | slider-vertical | sliderthumb-horizontal | 
+sliderthumb-vertical | square-button | textarea | textfield | 
+-apple-pay-button`
+node_modules\csstype\index.d.ts:19665:  | "::-webkit-file-upload-button"
+node_modules\csstype\index.d.ts:19679:  | "::file-selector-button"
+node_modules\csstype\index.d.ts:20218:  export type Appearance = Globals | 
+DataType.CompatAuto | "auto" | "menulist-button" | "none" | "textfield";
+node_modules\csstype\index.d.ts:21553:    | "-moz-window-button-box"
+node_modules\csstype\index.d.ts:21554:    | "-moz-window-button-box-maximized"
+node_modules\csstype\index.d.ts:21555:    | "-moz-window-button-close"
+node_modules\csstype\index.d.ts:21556:    | "-moz-window-button-maximize"
+node_modules\csstype\index.d.ts:21557:    | "-moz-window-button-minimize"
+node_modules\csstype\index.d.ts:21558:    | "-moz-window-button-restore"
+node_modules\csstype\index.d.ts:21564:    | "button"
+node_modules\csstype\index.d.ts:21565:    | "button-arrow-down"
+node_modules\csstype\index.d.ts:21566:    | "button-arrow-next"
+node_modules\csstype\index.d.ts:21567:    | "button-arrow-previous"
+node_modules\csstype\index.d.ts:21568:    | "button-arrow-up"
+node_modules\csstype\index.d.ts:21569:    | "button-bevel"
+node_modules\csstype\index.d.ts:21570:    | "button-focus"
+node_modules\csstype\index.d.ts:21576:    | "dualbutton"
+node_modules\csstype\index.d.ts:21587:    | "menulist-button"
+node_modules\csstype\index.d.ts:21615:    | "scrollbarbutton-down"
+node_modules\csstype\index.d.ts:21616:    | "scrollbarbutton-left"
+node_modules\csstype\index.d.ts:21617:    | "scrollbarbutton-right"
+node_modules\csstype\index.d.ts:21618:    | "scrollbarbutton-up"
+node_modules\csstype\index.d.ts:21627:    | "spinner-downbutton"
+node_modules\csstype\index.d.ts:21629:    | "spinner-upbutton"
+node_modules\csstype\index.d.ts:21641:    | "toolbarbutton"
+node_modules\csstype\index.d.ts:21642:    | "toolbarbutton-dropdown"
+node_modules\csstype\index.d.ts:21795:    | "-apple-pay-button"
+node_modules\csstype\index.d.ts:21796:    | "button"
+node_modules\csstype\index.d.ts:21797:    | "button-bevel"
+node_modules\csstype\index.d.ts:21800:    | "default-button"
+node_modules\csstype\index.d.ts:21801:    | "inner-spin-button"
+node_modules\csstype\index.d.ts:21807:    | "media-enter-fullscreen-button"
+node_modules\csstype\index.d.ts:21808:    | "media-exit-fullscreen-button"
+node_modules\csstype\index.d.ts:21809:    | "media-fullscreen-button"
+node_modules\csstype\index.d.ts:21810:    | "media-mute-button"
+node_modules\csstype\index.d.ts:21811:    | "media-overlay-play-button"
+node_modules\csstype\index.d.ts:21812:    | "media-play-button"
+node_modules\csstype\index.d.ts:21813:    | "media-seek-back-button"
+node_modules\csstype\index.d.ts:21814:    | "media-seek-forward-button"
+node_modules\csstype\index.d.ts:21818:    | 
+"media-toggle-closed-captions-button"
+node_modules\csstype\index.d.ts:21823:    | "menulist-button"
+node_modules\csstype\index.d.ts:21830:    | "push-button"
+node_modules\csstype\index.d.ts:21833:    | "searchfield-cancel-button"
+node_modules\csstype\index.d.ts:21835:    | "searchfield-results-button"
+node_modules\csstype\index.d.ts:21841:    | "square-button"
+node_modules\csstype\index.d.ts:22137:  type CompatAuto = "button" | 
+"checkbox" | "listbox" | "menulist" | "meter" | "progress-bar" | "radio" | 
+"searchfield" | "textarea";
+node_modules\csstype\index.d.ts:22212:    | "ButtonHighlight"
+node_modules\csstype\index.d.ts:22213:    | "ButtonShadow"
+node_modules\csstype\index.d.ts:22539:    | "ButtonBorder"
+node_modules\csstype\index.d.ts:22540:    | "ButtonFace"
+node_modules\csstype\index.d.ts:22541:    | "ButtonText"
+node_modules\eslint-config-next\node_modules\globals\index.d.ts:314:	readonly 
+'GamepadButton': false;
+node_modules\eslint-config-next\node_modules\globals\index.d.ts:315:	readonly 
+'GamepadButtonEvent': false;
+node_modules\eslint-config-next\node_modules\globals\index.d.ts:385:	readonly 
+'HTMLButtonElement': false;
+node_modules\eslint-config-next\node_modules\globals\index.d.ts:620:	readonly 
+'onclick': true;
+node_modules\eslint-config-next\node_modules\globals\index.d.ts:2759:	readonly 
+'onnotificationclick': true;
+node_modules\eslint-plugin-react\lib\rules\button-has-type.d.ts:3://# 
+sourceMappingURL=button-has-type.d.ts.map
+node_modules\eslint-plugin-react\lib\rules\index.d.ts:5:    'button-has-type': 
+import("eslint").Rule.RuleModule;
+node_modules\eslint-plugin-react\index.d.ts:18:    'button-has-type': 
+import("eslint").Rule.RuleModule;
+node_modules\eslint-plugin-react\index.d.ts:161:        rules: 
+Record<"boolean-prop-naming" | "button-has-type" | 
+"checked-requires-onchange-or-readonly" | "default-props-match-prop-types" | 
+"destructuring-assignment" | "display-name" | "forbid-component-props" | 
+"forbid-dom-props" | "forbid-elements" | "forbid-foreign-prop-types" | 
+"forbid-prop-types" | "prop-types" | "forward-ref-uses-ref" | 
+"function-component-definition" | "hook-use-state" | "iframe-missing-sandbox" 
+| "jsx-boolean-value" | "jsx-child-element-spacing" | 
+"jsx-closing-bracket-location" | "jsx-closing-tag-location" | 
+"jsx-curly-spacing" | "jsx-curly-newline" | "jsx-equals-spacing" | 
+"jsx-filename-extension" | "jsx-first-prop-new-line" | "jsx-handler-names" | 
+"jsx-indent" | "jsx-indent-props" | "jsx-key" | "jsx-max-depth" | 
+"jsx-max-props-per-line" | "jsx-newline" | "jsx-no-bind" | 
+"jsx-no-comment-textnodes" | "jsx-no-constructed-context-values" | 
+"jsx-no-duplicate-props" | "jsx-no-leaked-render" | "jsx-no-literals" | 
+"jsx-no-script-url" | "jsx-no-target-blank" | "jsx-no-useless-fragment" | 
+"jsx-one-expression-per-line" | "jsx-no-undef" | "jsx-curly-brace-presence" | 
+"jsx-pascal-case" | "jsx-fragments" | "jsx-props-no-multi-spaces" | 
+"jsx-props-no-spreading" | "jsx-props-no-spread-multi" | "sort-default-props" 
+| "jsx-sort-default-props" | "jsx-sort-props" | "jsx-tag-spacing" | 
+"jsx-space-before-closing" | "jsx-uses-react" | "jsx-uses-vars" | 
+"jsx-wrap-multilines" | "no-invalid-html-attribute" | 
+"no-access-state-in-setstate" | "no-adjacent-inline-elements" | 
+"no-array-index-key" | "no-arrow-function-lifecycle" | "no-children-prop" | 
+"no-danger" | "no-danger-with-children" | "no-deprecated" | 
+"no-direct-mutation-state" | "no-find-dom-node" | "no-is-mounted" | 
+"no-multi-comp" | "no-namespace" | "no-set-state" | "no-string-refs" | 
+"no-redundant-should-component-update" | "no-render-return-value" | 
+"no-this-in-sfc" | "no-typos" | "no-unescaped-entities" | 
+"no-unknown-property" | "no-unsafe" | "no-unstable-nested-components" | 
+"no-unused-class-component-methods" | "no-unused-prop-types" | 
+"no-unused-state" | "no-object-type-as-default-prop" | "prefer-es6-class" | 
+"prefer-exact-props" | "prefer-read-only-props" | "prefer-stateless-function" 
+| "react-in-jsx-scope" | "require-default-props" | "require-optimization" | 
+"require-render-return" | "self-closing-comp" | "sort-comp" | 
+"sort-prop-types" | "state-in-constructor" | "static-property-placement" | 
+"style-prop-object" | "void-dom-elements-no-children" | 
+"no-did-mount-set-state" | "no-did-update-set-state" | 
+"no-will-update-set-state", 2 | "error">;
+node_modules\globals\index.d.ts:530:	readonly 'GamepadButton': false;
+node_modules\globals\index.d.ts:545:	readonly 'HTMLButtonElement': false;
+node_modules\globals\index.d.ts:726:	readonly 'onclick': true;
+node_modules\globals\index.d.ts:1805:	readonly 'onnotificationclick': true;
+node_modules\next\dist\client\app-dir\link.d.ts:166:    onClick?: 
+React.MouseEventHandler<HTMLAnchorElement>;
+node_modules\next\dist\client\link.d.ts:85:    onClick?: 
+React.MouseEventHandler<HTMLAnchorElement>;
+node_modules\next\dist\next-devtools\dev-overlay\components\call-stack-frame\ca
+ll-stack-frame.d.ts:5:export declare const CALL_STACK_FRAME_STYLES = "\n  
+[data-nextjs-call-stack-frame-no-source] {\n    padding: 6px 8px;\n    
+margin-bottom: 4px;\n\n    border-radius: var(--rounded-lg);\n  }\n\n  
+[data-nextjs-call-stack-frame-no-source]:last-child {\n    margin-bottom: 0;\n 
+ }\n\n  [data-nextjs-call-stack-frame-ignored=\"true\"] {\n    opacity: 0.6;\n 
+ }\n\n  [data-nextjs-call-stack-frame] {\n    user-select: text;\n    display: 
+block;\n    box-sizing: border-box;\n\n    user-select: text;\n    
+-webkit-user-select: text;\n    -moz-user-select: text;\n    -ms-user-select: 
+text;\n\n    padding: 6px 8px;\n\n    border-radius: var(--rounded-lg);\n  
+}\n\n  .call-stack-frame-method-name {\n    display: flex;\n    align-items: 
+center;\n    gap: 4px;\n\n    margin-bottom: 4px;\n    font-family: 
+var(--font-stack-monospace);\n\n    color: var(--color-gray-1000);\n    
+font-size: var(--size-14);\n    font-weight: 500;\n    line-height: 
+var(--size-20);\n\n    svg {\n      width: var(--size-16px);\n      height: 
+var(--size-16px);\n    }\n  }\n\n  .open-in-editor-button, 
+.source-mapping-error-button {\n    display: flex;\n    align-items: center;\n 
+   justify-content: center;\n    border-radius: var(--rounded-full);\n    
+padding: 4px;\n    color: var(--color-font);\n\n    svg {\n      width: 
+var(--size-16);\n      height: var(--size-16);\n    }\n\n    &:focus-visible 
+{\n      outline: var(--focus-ring);\n      outline-offset: -2px;\n    }\n\n   
+ &:hover {\n      background: var(--color-gray-100);\n    }\n  }\n\n  
+.call-stack-frame-file-source {\n    color: var(--color-gray-900);\n    
+font-size: var(--size-14);\n    line-height: var(--size-20);\n  }\n";
+node_modules\next\dist\next-devtools\dev-overlay\components\copy-button\index.d
+.ts:2:type CopyButtonProps = React.HTMLProps<HTMLButtonElement> & {
+node_modules\next\dist\next-devtools\dev-overlay\components\copy-button\index.d
+.ts:7:export declare function CopyButton(props: CopyButtonProps & {
+node_modules\next\dist\next-devtools\dev-overlay\components\copy-button\index.d
+.ts:11:export declare const COPY_BUTTON_STYLES = "\n  .nextjs-data-copy-button 
+{\n    color: inherit;\n\n    svg {\n      width: var(--size-16);\n      
+height: var(--size-16);\n    }\n  }\n  .nextjs-data-copy-button:disabled {\n   
+ background-color: var(--color-gray-100);\n    cursor: not-allowed;\n  }\n  
+.nextjs-data-copy-button--initial:hover:not(:disabled) {\n    cursor: 
+pointer;\n  }\n  .nextjs-data-copy-button--error:not(:disabled),\n  
+.nextjs-data-copy-button--error:hover:not(:disabled) {\n    color: 
+var(--color-ansi-red);\n  }\n  
+.nextjs-data-copy-button--success:not(:disabled) {\n    color: 
+var(--color-ansi-green);\n  }\n";
+node_modules\next\dist\next-devtools\dev-overlay\components\devtools-indicator\
+next-logo.d.ts:1:export declare function NextLogo({ onTriggerClick, 
+...buttonProps }: {
+node_modules\next\dist\next-devtools\dev-overlay\components\devtools-indicator\
+next-logo.d.ts:3:} & React.ComponentProps<'button'>): 
+import("react/jsx-runtime").JSX.Element;
+node_modules\next\dist\next-devtools\dev-overlay\components\devtools-indicator\
+status-indicator.d.ts:12:    onClick?: () => void;
+node_modules\next\dist\next-devtools\dev-overlay\components\devtools-indicator\
+status-indicator.d.ts:14:export declare function StatusIndicator({ status, 
+onClick }: StatusIndicatorProps): import("react/jsx-runtime").JSX.Element | 
+null;
+node_modules\next\dist\next-devtools\dev-overlay\components\errors\dev-tools-in
+dicator\utils.d.ts:1:export declare function useFocusTrap(rootRef: 
+React.RefObject<HTMLElement | null>, triggerRef: 
+React.RefObject<HTMLButtonElement | null> | null, active: boolean, 
+onOpenFocus?: () => void): void;
+node_modules\next\dist\next-devtools\dev-overlay\components\errors\dev-tools-in
+dicator\utils.d.ts:3:export declare function useClickOutsideAndEscape(rootRef: 
+React.RefObject<HTMLElement | null>, triggerRef: 
+React.RefObject<HTMLButtonElement | null>, active: boolean, close: (reason: 
+'escape' | 'outside') => void, ownerDocument?: Document): void;
+node_modules\next\dist\next-devtools\dev-overlay\components\errors\error-messag
+e\error-message.d.ts:8:export declare const styles = "\n  
+.nextjs__container_errors_wrapper {\n    position: relative;\n  }\n\n  
+.nextjs__container_errors_desc {\n    margin: 0;\n    margin-left: 4px;\n    
+color: var(--color-red-900);\n    font-weight: 500;\n    font-size: 
+var(--size-16);\n    letter-spacing: -0.32px;\n    line-height: 
+var(--size-24);\n    overflow-wrap: break-word;\n    white-space: pre-wrap;\n  
+}\n\n  .nextjs__container_errors_desc.truncated {\n    max-height: 200px;\n    
+overflow: hidden;\n  }\n\n  .nextjs__container_errors_gradient_overlay {\n    
+position: absolute;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    height: 
+85px;\n    background: linear-gradient(\n      180deg,\n      rgba(250, 250, 
+250, 0) 0%,\n      var(--color-background-100) 100%\n    );\n  }\n\n  
+.nextjs__container_errors_expand_button {\n    position: absolute;\n    
+bottom: 10px;\n    left: 50%;\n    transform: translateX(-50%);\n    display: 
+flex;\n    align-items: center;\n    padding: 6px 8px;\n    background: 
+var(--color-background-100);\n    border: 1px solid 
+var(--color-gray-alpha-400);\n    border-radius: 999px;\n    box-shadow:\n     
+ 0px 2px 2px var(--color-gray-alpha-100),\n      0px 8px 8px -8px 
+var(--color-gray-alpha-100);\n    font-size: var(--size-13);\n    cursor: 
+pointer;\n    color: var(--color-gray-900);\n    font-weight: 500;\n    
+transition: background-color 0.2s ease;\n  }\n\n  
+.nextjs__container_errors_expand_button:hover {\n    background: 
+var(--color-gray-100);\n  }\n";
+node_modules\next\dist\next-devtools\dev-overlay\components\errors\error-overla
+y-footer\error-feedback\error-feedback.d.ts:6:export declare const styles = 
+"\n  .error-feedback {\n    display: flex;\n    align-items: center;\n    gap: 
+8px;\n    white-space: nowrap;\n    color: var(--color-gray-900);\n  }\n\n  
+.error-feedback-thanks {\n    height: var(--size-24);\n    display: flex;\n    
+align-items: center;\n    padding-right: 4px; /* To match the 4px inner 
+padding of the thumbs up and down icons */\n  }\n\n  .feedback-button {\n    
+background: none;\n    border: none;\n    border-radius: var(--rounded-md);\n  
+  width: var(--size-24);\n    height: var(--size-24);\n    display: flex;\n    
+align-items: center;\n    justify-content: center;\n    cursor: pointer;\n\n   
+ &:focus {\n      outline: var(--focus-ring);\n    }\n\n    &:hover {\n      
+background: var(--color-gray-alpha-100);\n    }\n\n    &:active {\n      
+background: var(--color-gray-alpha-200);\n    }\n  }\n\n  
+.feedback-button[aria-disabled='true'] {\n    opacity: 0.7;\n    cursor: 
+not-allowed;\n  }\n\n  .feedback-button.voted {\n    background: 
+var(--color-gray-alpha-200);\n  }\n\n  .thumbs-up-icon,\n  .thumbs-down-icon 
+{\n    color: var(--color-gray-900);\n    width: var(--size-16);\n    height: 
+var(--size-16);\n  }\n";
+node_modules\next\dist\next-devtools\dev-overlay\components\errors\error-overla
+y-footer\error-overlay-footer.d.ts:5:export declare const styles = "\n  
+.error-overlay-footer {\n    display: flex;\n    flex-direction: row;\n    
+justify-content: space-between;\n\n    gap: 8px;\n    padding: 12px;\n    
+background: var(--color-background-200);\n    border-top: 1px solid 
+var(--color-gray-400);\n  }\n\n  .error-feedback {\n    margin-left: auto;\n\n 
+   p {\n      font-size: var(--size-14);\n      font-weight: 500;\n      
+margin: 0;\n    }\n  }\n\n  \n  .error-feedback {\n    display: flex;\n    
+align-items: center;\n    gap: 8px;\n    white-space: nowrap;\n    color: 
+var(--color-gray-900);\n  }\n\n  .error-feedback-thanks {\n    height: 
+var(--size-24);\n    display: flex;\n    align-items: center;\n    
+padding-right: 4px; /* To match the 4px inner padding of the thumbs up and 
+down icons */\n  }\n\n  .feedback-button {\n    background: none;\n    border: 
+none;\n    border-radius: var(--rounded-md);\n    width: var(--size-24);\n    
+height: var(--size-24);\n    display: flex;\n    align-items: center;\n    
+justify-content: center;\n    cursor: pointer;\n\n    &:focus {\n      
+outline: var(--focus-ring);\n    }\n\n    &:hover {\n      background: 
+var(--color-gray-alpha-100);\n    }\n\n    &:active {\n      background: 
+var(--color-gray-alpha-200);\n    }\n  }\n\n  
+.feedback-button[aria-disabled='true'] {\n    opacity: 0.7;\n    cursor: 
+not-allowed;\n  }\n\n  .feedback-button.voted {\n    background: 
+var(--color-gray-alpha-200);\n  }\n\n  .thumbs-up-icon,\n  .thumbs-down-icon 
+{\n    color: var(--color-gray-900);\n    width: var(--size-16);\n    height: 
+var(--size-16);\n  }\n\n";
+node_modules\next\dist\next-devtools\dev-overlay\components\errors\error-overla
+y-pagination\error-overlay-pagination.d.ts:8:export declare const styles = "\n 
+ .error-overlay-pagination {\n    -webkit-font-smoothing: antialiased;\n    
+display: flex;\n    justify-content: center;\n    align-items: center;\n    
+gap: 8px;\n    width: fit-content;\n  }\n\n  .error-overlay-pagination-count 
+{\n    color: var(--color-gray-900);\n    text-align: center;\n    font-size: 
+var(--size-14);\n    font-weight: 500;\n    line-height: var(--size-16);\n    
+font-variant-numeric: tabular-nums;\n  }\n\n  .error-overlay-pagination-button 
+{\n    display: flex;\n    justify-content: center;\n    align-items: 
+center;\n\n    width: var(--size-24);\n    height: var(--size-24);\n    
+background: var(--color-gray-300);\n    flex-shrink: 0;\n\n    border: none;\n 
+   border-radius: var(--rounded-full);\n\n    svg {\n      width: 
+var(--size-16);\n      height: var(--size-16);\n    }\n\n    &:focus-visible 
+{\n      outline: var(--focus-ring);\n    }\n\n    &:not(:disabled):active {\n 
+     background: var(--color-gray-500);\n    }\n\n    &:disabled {\n      
+opacity: 0.5;\n      cursor: not-allowed;\n    }\n  }\n\n  
+.error-overlay-pagination-button-icon {\n    color: var(--color-gray-1000);\n  
+}\n";
+node_modules\next\dist\next-devtools\dev-overlay\components\errors\error-overla
+y-toolbar\copy-error-button.d.ts:1:export declare function CopyErrorButton({ 
+error, generateErrorInfo, }: {
+node_modules\next\dist\next-devtools\dev-overlay\components\errors\error-overla
+y-toolbar\docs-link-button.d.ts:1:export declare function DocsLinkButton({ 
+errorMessage }: {
+node_modules\next\dist\next-devtools\dev-overlay\components\errors\error-overla
+y-toolbar\error-overlay-toolbar.d.ts:5:    feedbackButton?: React.ReactNode;
+node_modules\next\dist\next-devtools\dev-overlay\components\errors\error-overla
+y-toolbar\error-overlay-toolbar.d.ts:8:export declare function 
+ErrorOverlayToolbar({ error, debugInfo, feedbackButton, generateErrorInfo, }: 
+ErrorOverlayToolbarProps): import("react/jsx-runtime").JSX.Element;
+node_modules\next\dist\next-devtools\dev-overlay\components\errors\error-overla
+y-toolbar\error-overlay-toolbar.d.ts:9:export declare const styles = "\n  
+.error-overlay-toolbar {\n    display: flex;\n    gap: 6px;\n  }\n\n  
+.nodejs-inspector-button,\n  .copy-error-button,\n  .docs-link-button {\n    
+display: flex;\n    justify-content: center;\n    align-items: center;\n\n    
+width: var(--size-28);\n    height: var(--size-28);\n    background: 
+var(--color-background-100);\n    background-clip: padding-box;\n    border: 
+1px solid var(--color-gray-alpha-400);\n    box-shadow: var(--shadow-small);\n 
+   border-radius: var(--rounded-full);\n\n    svg {\n      width: 
+var(--size-14);\n      height: var(--size-14);\n    }\n\n    &:focus {\n      
+outline: var(--focus-ring);\n    }\n\n    &:not(:disabled):hover {\n      
+background: var(--color-gray-alpha-100);\n    }\n\n    &:not(:disabled):active 
+{\n      background: var(--color-gray-alpha-200);\n    }\n\n    &:disabled {\n 
+     background-color: var(--color-gray-100);\n      cursor: not-allowed;\n    
+}\n  }\n\n  .nodejs-inspector-button[data-pending='true'] {\n    cursor: 
+wait;\n  }\n\n  .error-overlay-toolbar-button-icon {\n    color: 
+var(--color-gray-900);\n  }\n";
+node_modules\next\dist\next-devtools\dev-overlay\components\errors\error-overla
+y-toolbar\nodejs-inspector-button.d.ts:1:export declare function 
+NodejsInspectorButton({ defaultDevtoolsFrontendUrl, }: {
+node_modules\next\dist\next-devtools\dev-overlay\components\toast\toast.d.ts:4:
+    onClick?: () => void;
+node_modules\next\dist\next-devtools\dev-overlay\container\runtime-error\compon
+ent-stack-pseudo-html.d.ts:2:export declare const PSEUDO_HTML_DIFF_STYLES = 
+"\n  [data-nextjs-container-errors-pseudo-html] {\n    padding: 8px 0;\n    
+margin: 8px 0;\n    border: 1px solid var(--color-gray-400);\n    background: 
+var(--color-background-200);\n    color: var(--color-syntax-constant);\n    
+font-family: var(--font-stack-monospace);\n    font-size: var(--size-12);\n    
+line-height: 1.33em; /* 16px in 12px font size */\n    border-radius: 
+var(--rounded-md-2);\n  }\n  [data-nextjs-container-errors-pseudo-html-line] 
+{\n    display: inline-block;\n    width: 100%;\n    padding-left: 40px;\n    
+line-height: calc(5 / 3);\n  }\n  
+[data-nextjs-container-errors-pseudo-html--diff='error'] {\n    background: 
+var(--color-amber-100);\n    box-shadow: 2px 0 0 0 var(--color-amber-900) 
+inset;\n    font-weight: bold;\n  }\n  
+[data-nextjs-container-errors-pseudo-html-collapse-button] {\n    all: 
+unset;\n    margin-left: 12px;\n    &:focus {\n      outline: none;\n    }\n  
+}\n  [data-nextjs-container-errors-pseudo-html--diff='add'] {\n    background: 
+var(--color-green-300);\n  }\n  
+[data-nextjs-container-errors-pseudo-html-line-sign] {\n    margin-left: 
+calc(24px * -1);\n    margin-right: 24px;\n  }\n  
+[data-nextjs-container-errors-pseudo-html--diff='add']\n    
+[data-nextjs-container-errors-pseudo-html-line-sign] {\n    color: 
+var(--color-green-900);\n  }\n  
+[data-nextjs-container-errors-pseudo-html--diff='remove'] {\n    background: 
+var(--color-red-300);\n  }\n  
+[data-nextjs-container-errors-pseudo-html--diff='remove']\n    
+[data-nextjs-container-errors-pseudo-html-line-sign] {\n    color: 
+var(--color-red-900);\n    margin-left: calc(24px * -1);\n    margin-right: 
+24px;\n  }\n  [data-nextjs-container-errors-pseudo-html--diff='error']\n    
+[data-nextjs-container-errors-pseudo-html-line-sign] {\n    color: 
+var(--color-amber-900);\n  }\n  \n  
+[data-nextjs-container-errors-pseudo-html--hint] {\n    display: 
+inline-block;\n    font-size: 0;\n    height: 0;\n  }\n  
+[data-nextjs-container-errors-pseudo-html--tag-adjacent='false'] {\n    color: 
+var(--color-accents-1);\n  }\n  .nextjs__container_errors__component-stack {\n 
+   margin: 0;\n  }\n  
+[data-nextjs-container-errors-pseudo-html-collapse='true']\n    
+.nextjs__container_errors__component-stack\n    code {\n    max-height: 
+120px;\n    mask-image: linear-gradient(to bottom,rgba(0,0,0,0) 0%,black 
+10%);\n    padding-bottom: 40px;\n  }\n  
+.nextjs__container_errors__component-stack code {\n    display: block;\n    
+width: 100%;\n    white-space: pre-wrap;\n    scroll-snap-type: y mandatory;\n 
+   overflow-y: hidden;\n  }\n  
+[data-nextjs-container-errors-pseudo-html--diff] {\n    scroll-snap-align: 
+center;\n  }\n  .error-overlay-hydration-error-diff-plus-icon {\n    color: 
+var(--color-green-900);\n  }\n  .error-overlay-hydration-error-diff-minus-icon 
+{\n    color: var(--color-red-900);\n  }\n";
+node_modules\next\dist\next-devtools\dev-overlay\container\runtime-error\index.
+d.ts:7:export declare const styles = "\n  \n  
+[data-nextjs-container-errors-pseudo-html] {\n    padding: 8px 0;\n    margin: 
+8px 0;\n    border: 1px solid var(--color-gray-400);\n    background: 
+var(--color-background-200);\n    color: var(--color-syntax-constant);\n    
+font-family: var(--font-stack-monospace);\n    font-size: var(--size-12);\n    
+line-height: 1.33em; /* 16px in 12px font size */\n    border-radius: 
+var(--rounded-md-2);\n  }\n  [data-nextjs-container-errors-pseudo-html-line] 
+{\n    display: inline-block;\n    width: 100%;\n    padding-left: 40px;\n    
+line-height: calc(5 / 3);\n  }\n  
+[data-nextjs-container-errors-pseudo-html--diff='error'] {\n    background: 
+var(--color-amber-100);\n    box-shadow: 2px 0 0 0 var(--color-amber-900) 
+inset;\n    font-weight: bold;\n  }\n  
+[data-nextjs-container-errors-pseudo-html-collapse-button] {\n    all: 
+unset;\n    margin-left: 12px;\n    &:focus {\n      outline: none;\n    }\n  
+}\n  [data-nextjs-container-errors-pseudo-html--diff='add'] {\n    background: 
+var(--color-green-300);\n  }\n  
+[data-nextjs-container-errors-pseudo-html-line-sign] {\n    margin-left: 
+calc(24px * -1);\n    margin-right: 24px;\n  }\n  
+[data-nextjs-container-errors-pseudo-html--diff='add']\n    
+[data-nextjs-container-errors-pseudo-html-line-sign] {\n    color: 
+var(--color-green-900);\n  }\n  
+[data-nextjs-container-errors-pseudo-html--diff='remove'] {\n    background: 
+var(--color-red-300);\n  }\n  
+[data-nextjs-container-errors-pseudo-html--diff='remove']\n    
+[data-nextjs-container-errors-pseudo-html-line-sign] {\n    color: 
+var(--color-red-900);\n    margin-left: calc(24px * -1);\n    margin-right: 
+24px;\n  }\n  [data-nextjs-container-errors-pseudo-html--diff='error']\n    
+[data-nextjs-container-errors-pseudo-html-line-sign] {\n    color: 
+var(--color-amber-900);\n  }\n  \n  
+[data-nextjs-container-errors-pseudo-html--hint] {\n    display: 
+inline-block;\n    font-size: 0;\n    height: 0;\n  }\n  
+[data-nextjs-container-errors-pseudo-html--tag-adjacent='false'] {\n    color: 
+var(--color-accents-1);\n  }\n  .nextjs__container_errors__component-stack {\n 
+   margin: 0;\n  }\n  
+[data-nextjs-container-errors-pseudo-html-collapse='true']\n    
+.nextjs__container_errors__component-stack\n    code {\n    max-height: 
+120px;\n    mask-image: linear-gradient(to bottom,rgba(0,0,0,0) 0%,black 
+10%);\n    padding-bottom: 40px;\n  }\n  
+.nextjs__container_errors__component-stack code {\n    display: block;\n    
+width: 100%;\n    white-space: pre-wrap;\n    scroll-snap-type: y mandatory;\n 
+   overflow-y: hidden;\n  }\n  
+[data-nextjs-container-errors-pseudo-html--diff] {\n    scroll-snap-align: 
+center;\n  }\n  .error-overlay-hydration-error-diff-plus-icon {\n    color: 
+var(--color-green-900);\n  }\n  .error-overlay-hydration-error-diff-minus-icon 
+{\n    color: var(--color-red-900);\n  }\n\n";
+node_modules\next\dist\next-devtools\dev-overlay\container\errors.d.ts:34:expor
+t declare const styles = "\n  .nextjs-error-with-static {\n    bottom: 
+calc(16px * 4.5);\n  }\n  p.nextjs__container_errors__link {\n    font-size: 
+var(--size-14);\n  }\n  p.nextjs__container_errors__notes {\n    color: 
+var(--color-stack-notes);\n    font-size: var(--size-14);\n    line-height: 
+1.5;\n  }\n  .nextjs-container-errors-body > h2:not(:first-child) {\n    
+margin-top: calc(16px + 8px);\n  }\n  .nextjs-container-errors-body > h2 {\n   
+ color: var(--color-title-color);\n    margin-bottom: 8px;\n    font-size: 
+var(--size-20);\n  }\n  .nextjs-toast-errors-parent {\n    cursor: pointer;\n  
+  transition: transform 0.2s ease;\n  }\n  .nextjs-toast-errors-parent:hover 
+{\n    transform: scale(1.1);\n  }\n  .nextjs-toast-errors {\n    display: 
+flex;\n    align-items: center;\n    justify-content: flex-start;\n  }\n  
+.nextjs-toast-errors > svg {\n    margin-right: 8px;\n  }\n  
+.nextjs-toast-hide-button {\n    margin-left: 24px;\n    border: none;\n    
+background: none;\n    color: var(--color-ansi-bright-white);\n    padding: 
+0;\n    transition: opacity 0.25s ease;\n    opacity: 0.7;\n  }\n  
+.nextjs-toast-hide-button:hover {\n    opacity: 1;\n  }\n  
+.nextjs__container_errors__error_title {\n    display: flex;\n    align-items: 
+center;\n    justify-content: space-between;\n    margin-bottom: 14px;\n  }\n  
+.error-overlay-notes-container {\n    margin: 8px 2px;\n  }\n  
+.error-overlay-notes-container p {\n    white-space: pre-wrap;\n  }\n  
+.nextjs__blocking_page_load_error_description {\n    color: 
+var(--color-stack-notes);\n  }\n  
+.nextjs__blocking_page_load_error_description_title {\n    color: 
+var(--color-title-color);\n  }\n  .nextjs__blocking_page_load_error_fix_option 
+{\n    background-color: var(--color-background-200);\n    padding: 14px;\n    
+border-radius: var(--rounded-md-2);\n    border: 1px solid 
+var(--color-gray-alpha-400);\n  }\n  .external-link, .external-link:hover {\n  
+  color:inherit;\n  }\n";
+node_modules\next\dist\next-devtools\dev-overlay\hooks\use-on-click-outside.d.t
+s:2:export declare function useOnClickOutside(el: Node | React.RefObject<Node 
+| null> | null, cssSelectorsToExclude: string[], handler: ((e: MouseEvent | 
+TouchEvent) => void) | undefined): void;
+node_modules\next\dist\next-devtools\dev-overlay\menu\context.d.ts:6:    
+triggerRef: React.RefObject<HTMLButtonElement | null>;
+node_modules\next\dist\next-devtools\dev-overlay\menu\context.d.ts:13:    
+triggerRef: React.RefObject<HTMLButtonElement | null>;
+node_modules\next\dist\next-devtools\dev-overlay\menu\dev-overlay-menu.d.ts:1:e
+xport declare const DevtoolMenu: ({ closeOnClickOutside, items, }: {
+node_modules\next\dist\next-devtools\dev-overlay\menu\dev-overlay-menu.d.ts:2: 
+   closeOnClickOutside?: boolean;
+node_modules\next\dist\next-devtools\dev-overlay\menu\dev-overlay-menu.d.ts:4: 
+       onClick?: () => void;
+node_modules\next\dist\next-devtools\dev-overlay\panel\dynamic-panel.d.ts:2:exp
+ort declare function DynamicPanel({ header, children, draggable, sizeConfig, 
+closeOnClickOutside, sharePanelSizeGlobally, sharePanelPositionGlobally, 
+containerProps, }: {
+node_modules\next\dist\next-devtools\dev-overlay\panel\dynamic-panel.d.ts:25:  
+  closeOnClickOutside?: boolean;
+node_modules\typescript\lib\lib.dom.d.ts:1215:    button?: number;
+node_modules\typescript\lib\lib.dom.d.ts:1216:    buttons?: number;
+node_modules\typescript\lib\lib.dom.d.ts:12335: * The **`Gamepad`** interface 
+of the Gamepad API defines an individual gamepad or other controller, allowing 
+access to information such as button presses, axis positions, and id.
+node_modules\typescript\lib\lib.dom.d.ts:12347:     * The **`buttons`** 
+property of the Gamepad interface returns an array of GamepadButton objects 
+representing the buttons present on the device.
+node_modules\typescript\lib\lib.dom.d.ts:12349:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/Gamepad/buttons)
+node_modules\typescript\lib\lib.dom.d.ts:12351:    readonly buttons: 
+ReadonlyArray<GamepadButton>;
+node_modules\typescript\lib\lib.dom.d.ts:12396: * The **`GamepadButton`** 
+interface defines an individual button of a gamepad or other controller, 
+allowing access to the current state of different types of buttons available 
+on the control device.
+node_modules\typescript\lib\lib.dom.d.ts:12398: * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/GamepadButton)
+node_modules\typescript\lib\lib.dom.d.ts:12400:interface GamepadButton {
+node_modules\typescript\lib\lib.dom.d.ts:12402:     * The 
+**`GamepadButton.pressed`** property of the the button is currently pressed 
+(`true`) or unpressed (`false`).
+node_modules\typescript\lib\lib.dom.d.ts:12404:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/GamepadButton/pressed)
+node_modules\typescript\lib\lib.dom.d.ts:12408:     * The **`touched`** 
+property of the a button capable of detecting touch is currently touched 
+(`true`) or not touched (`false`).
+node_modules\typescript\lib\lib.dom.d.ts:12410:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/GamepadButton/touched)
+node_modules\typescript\lib\lib.dom.d.ts:12414:     * The 
+**`GamepadButton.value`** property of the current state of analog buttons on 
+many modern gamepads, such as the triggers.
+node_modules\typescript\lib\lib.dom.d.ts:12416:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/GamepadButton/value)
+node_modules\typescript\lib\lib.dom.d.ts:12421:declare var GamepadButton: {
+node_modules\typescript\lib\lib.dom.d.ts:12422:    prototype: GamepadButton;
+node_modules\typescript\lib\lib.dom.d.ts:12423:    new(): GamepadButton;
+node_modules\typescript\lib\lib.dom.d.ts:12771:    onclick: ((this: 
+GlobalEventHandlers, ev: PointerEvent) => any) | null;
+node_modules\typescript\lib\lib.dom.d.ts:13258: * The **`HTMLButtonElement`** 
+interface provides properties and methods (beyond the regular HTMLElement 
+interface it also has available to it by inheritance) for manipulating button 
+elements.
+node_modules\typescript\lib\lib.dom.d.ts:13260: * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/HTMLButtonElement)
+node_modules\typescript\lib\lib.dom.d.ts:13262:interface HTMLButtonElement 
+extends HTMLElement, PopoverInvokerElement {
+node_modules\typescript\lib\lib.dom.d.ts:13264:     * The 
+**`HTMLButtonElement.disabled`** property indicates whether the control is 
+disabled, meaning that it does not accept any clicks.
+node_modules\typescript\lib\lib.dom.d.ts:13266:     * [MDN Reference](https://d
+eveloper.mozilla.org/docs/Web/API/HTMLButtonElement/disabled)
+node_modules\typescript\lib\lib.dom.d.ts:13270:     * The **`form`** read-only 
+property of the HTMLButtonElement interface returns an HTMLFormElement object 
+that owns this button, or `null` if this button is not owned by any form.
+node_modules\typescript\lib\lib.dom.d.ts:13272:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/HTMLButtonElement/form)
+node_modules\typescript\lib\lib.dom.d.ts:13276:     * The **`formAction`** 
+property of the HTMLButtonElement interface is the URL of the program that is 
+executed on the server when the form that owns this control is submitted.
+node_modules\typescript\lib\lib.dom.d.ts:13278:     * [MDN Reference](https://d
+eveloper.mozilla.org/docs/Web/API/HTMLButtonElement/formAction)
+node_modules\typescript\lib\lib.dom.d.ts:13282:     * The **`formEnctype`** 
+property of the HTMLButtonElement interface is the MIME_type of the content 
+sent to the server when the form is submitted.
+node_modules\typescript\lib\lib.dom.d.ts:13284:     * [MDN Reference](https://d
+eveloper.mozilla.org/docs/Web/API/HTMLButtonElement/formEnctype)
+node_modules\typescript\lib\lib.dom.d.ts:13288:     * The **`formMethod`** 
+property of the HTMLButtonElement interface is the HTTP method used to submit 
+the form if the button element is the control that submits the form.
+node_modules\typescript\lib\lib.dom.d.ts:13290:     * [MDN Reference](https://d
+eveloper.mozilla.org/docs/Web/API/HTMLButtonElement/formMethod)
+node_modules\typescript\lib\lib.dom.d.ts:13294:     * The **`formNoValidate`** 
+property of the HTMLButtonElement interface is a boolean value indicating if 
+the form will bypass constraint validation when submitted via the button.
+node_modules\typescript\lib\lib.dom.d.ts:13296:     * [MDN Reference](https://d
+eveloper.mozilla.org/docs/Web/API/HTMLButtonElement/formNoValidate)
+node_modules\typescript\lib\lib.dom.d.ts:13300:     * The **`formTarget`** 
+property of the HTMLButtonElement interface is the tab, window, or iframe 
+where the response of the submitted form is to be displayed.
+node_modules\typescript\lib\lib.dom.d.ts:13302:     * [MDN Reference](https://d
+eveloper.mozilla.org/docs/Web/API/HTMLButtonElement/formTarget)
+node_modules\typescript\lib\lib.dom.d.ts:13306:     * The 
+**`HTMLButtonElement.labels`** read-only property returns a A NodeList 
+containing the `<label>` elements associated with the `<button>` element.
+node_modules\typescript\lib\lib.dom.d.ts:13308:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/HTMLButtonElement/labels)
+node_modules\typescript\lib\lib.dom.d.ts:13312:     * The **`name`** property 
+of the HTMLButtonElement interface indicates the name of the button element or 
+the empty string if the element has no name.
+node_modules\typescript\lib\lib.dom.d.ts:13314:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/HTMLButtonElement/name)
+node_modules\typescript\lib\lib.dom.d.ts:13318:     * The **`type`** property 
+of the HTMLButtonElement interface is a string that indicates the behavior 
+type of the button element.
+node_modules\typescript\lib\lib.dom.d.ts:13320:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/HTMLButtonElement/type)
+node_modules\typescript\lib\lib.dom.d.ts:13322:    type: "submit" | "reset" | 
+"button";
+node_modules\typescript\lib\lib.dom.d.ts:13324:     * The 
+**`validationMessage`** read-only property of the HTMLButtonElement interface 
+returns a string representing a localized message that describes the 
+validation constraints that the button control does not satisfy (if any).
+node_modules\typescript\lib\lib.dom.d.ts:13326:     * [MDN Reference](https://d
+eveloper.mozilla.org/docs/Web/API/HTMLButtonElement/validationMessage)
+node_modules\typescript\lib\lib.dom.d.ts:13330:     * The **`validity`** 
+read-only property of the HTMLButtonElement interface returns a ValidityState 
+object that represents the validity states this element is in.
+node_modules\typescript\lib\lib.dom.d.ts:13332:     * [MDN Reference](https://d
+eveloper.mozilla.org/docs/Web/API/HTMLButtonElement/validity)
+node_modules\typescript\lib\lib.dom.d.ts:13336:     * The **`value`** property 
+of the HTMLButtonElement interface represents the value of the button element 
+as a string, or the empty string if no value is set.
+node_modules\typescript\lib\lib.dom.d.ts:13338:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/HTMLButtonElement/value)
+node_modules\typescript\lib\lib.dom.d.ts:13342:     * The **`willValidate`** 
+read-only property of the HTMLButtonElement interface indicates whether the 
+button element is a candidate for constraint validation.
+node_modules\typescript\lib\lib.dom.d.ts:13344:     * [MDN Reference](https://d
+eveloper.mozilla.org/docs/Web/API/HTMLButtonElement/willValidate)
+node_modules\typescript\lib\lib.dom.d.ts:13348:     * The 
+**`checkValidity()`** method of the HTMLButtonElement interface returns a 
+boolean value which indicates if the element meets any constraint validation 
+rules applied to it.
+node_modules\typescript\lib\lib.dom.d.ts:13350:     * [MDN Reference](https://d
+eveloper.mozilla.org/docs/Web/API/HTMLButtonElement/checkValidity)
+node_modules\typescript\lib\lib.dom.d.ts:13354:     * The 
+**`reportValidity()`** method of the HTMLButtonElement interface performs the 
+same validity checking steps as the HTMLButtonElement.checkValidity method.
+node_modules\typescript\lib\lib.dom.d.ts:13356:     * [MDN Reference](https://d
+eveloper.mozilla.org/docs/Web/API/HTMLButtonElement/reportValidity)
+node_modules\typescript\lib\lib.dom.d.ts:13360:     * The 
+**`setCustomValidity()`** method of the HTMLButtonElement interface sets the 
+custom validity message for the button element.
+node_modules\typescript\lib\lib.dom.d.ts:13362:     * [MDN Reference](https://d
+eveloper.mozilla.org/docs/Web/API/HTMLButtonElement/setCustomValidity)
+node_modules\typescript\lib\lib.dom.d.ts:13365:    addEventListener<K extends 
+keyof HTMLElementEventMap>(type: K, listener: (this: HTMLButtonElement, ev: 
+HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): 
+void;
+node_modules\typescript\lib\lib.dom.d.ts:13367:    removeEventListener<K 
+extends keyof HTMLElementEventMap>(type: K, listener: (this: 
+HTMLButtonElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | 
+EventListenerOptions): void;
+node_modules\typescript\lib\lib.dom.d.ts:13371:declare var HTMLButtonElement: {
+node_modules\typescript\lib\lib.dom.d.ts:13372:    prototype: 
+HTMLButtonElement;
+node_modules\typescript\lib\lib.dom.d.ts:13373:    new(): HTMLButtonElement;
+node_modules\typescript\lib\lib.dom.d.ts:13914:     * The **`elements`** 
+read-only property of the HTMLFieldSetElement interface returns an 
+HTMLCollection object containing all form control elements (button, fieldset, 
+input, object, output, select, and textarea) that are descendants of this 
+field set.
+node_modules\typescript\lib\lib.dom.d.ts:14141:     * The HTMLFormElement 
+method **`requestSubmit()`** requests that the form be submitted using a 
+specific submit button.
+node_modules\typescript\lib\lib.dom.d.ts:14712:     * The **`alt`** property 
+of the HTMLInputElement interface defines the textual label for the button for 
+users and user agents who cannot use the image.
+node_modules\typescript\lib\lib.dom.d.ts:14910:     * The **`src`** property 
+of the HTMLInputElement interface specifies the source of an image to display 
+as the graphical submit button.
+node_modules\typescript\lib\lib.dom.d.ts:19353:     * The **`reload()`** 
+method of the Location interface reloads the current URL, like the Refresh 
+button.
+node_modules\typescript\lib\lib.dom.d.ts:20937:     * The 
+**`MouseEvent.button`** read-only property indicates which button was pressed 
+or released on the mouse to trigger the event.
+node_modules\typescript\lib\lib.dom.d.ts:20939:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/MouseEvent/button)
+node_modules\typescript\lib\lib.dom.d.ts:20941:    readonly button: number;
+node_modules\typescript\lib\lib.dom.d.ts:20943:     * The 
+**`MouseEvent.buttons`** read-only property indicates which buttons are 
+pressed on the mouse (or other input device) when a mouse event is triggered.
+node_modules\typescript\lib\lib.dom.d.ts:20945:     * [MDN 
+Reference](https://developer.mozilla.org/docs/Web/API/MouseEvent/buttons)
+node_modules\typescript\lib\lib.dom.d.ts:20947:    readonly buttons: number;
+node_modules\typescript\lib\lib.dom.d.ts:21068:    initMouseEvent(typeArg: 
+string, canBubbleArg: boolean, cancelableArg: boolean, viewArg: Window, 
+detailArg: number, screenXArg: number, screenYArg: number, clientXArg: number, 
+clientYArg: number, ctrlKeyArg: boolean, altKeyArg: boolean, shiftKeyArg: 
+boolean, metaKeyArg: boolean, buttonArg: number, relatedTargetArg: EventTarget 
+| null): void;
+node_modules\typescript\lib\lib.dom.d.ts:22071:    onclick: ((this: 
+Notification, ev: Event) => any) | null;
+node_modules\typescript\lib\lib.dom.d.ts:24146:    /** [MDN Reference](https://
+developer.mozilla.org/docs/Web/API/HTMLButtonElement/popoverTargetAction) */
+node_modules\typescript\lib\lib.dom.d.ts:24148:    /** [MDN Reference](https://
+developer.mozilla.org/docs/Web/API/HTMLButtonElement/popoverTargetElement) */
+node_modules\typescript\lib\lib.dom.d.ts:25581:     * If the underlying 
+element collection contains radio buttons, the **`RadioNodeList.value`** 
+property represents the checked radio button.
+node_modules\typescript\lib\lib.dom.d.ts:31629:     * The read-only 
+**`submitter`** property found on the SubmitEvent interface specifies the 
+submit button or other element that was invoked to cause the form to be 
+submitted.
+node_modules\typescript\lib\lib.dom.d.ts:32615:     * The **`UIEvent.which`** 
+read-only property of the UIEvent interface returns a number that indicates 
+which button was pressed on the mouse, or the numeric `keyCode` or the 
+character code (`charCode`) of the key pressed on the keyboard.
+node_modules\typescript\lib\lib.dom.d.ts:32995:     * The read-only 
+**`tooShort`** property of the `ValidityState` interface indicates if the 
+value of an input, button, select, output, fieldset or textarea, after having 
+been edited by the user, is less than the minimum code-unit length established 
+by the element's `minlength` attribute.
+node_modules\typescript\lib\lib.dom.d.ts:36790:     * The **`window.stop()`** 
+stops further resource loading in the current browsing context, equivalent to 
+the stop button in the browser.
+node_modules\typescript\lib\lib.dom.d.ts:38152:    "button": HTMLButtonElement;
+node_modules\typescript\lib\lib.dom.d.ts:38826: * The **`window.stop()`** 
+stops further resource loading in the current browsing context, equivalent to 
+the stop button in the browser.
+node_modules\typescript\lib\lib.dom.d.ts:38871:declare var onclick: ((this: 
+Window, ev: PointerEvent) => any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:6138:    onclick: ((this: 
+Notification, ev: Event) => any) | null;
+node_modules\typescript\lib\lib.webworker.d.ts:6199:     * The **`action`** 
+read-only property of the NotificationEvent interface returns the string ID of 
+the notification button the user clicked.
+node_modules\typescript\lib\lib.webworker.d.ts:8105:    "notificationclick": 
+NotificationEvent;
+node_modules\typescript\lib\lib.webworker.d.ts:8142:    /** [MDN Reference](htt
+ps://developer.mozilla.org/docs/Web/API/ServiceWorkerGlobalScope/notificationcl
+ick_event) */
+node_modules\typescript\lib\lib.webworker.d.ts:8143:    onnotificationclick: 
+((this: ServiceWorkerGlobalScope, ev: NotificationEvent) => any) | null;
+src\app\(protected)\dashboard\page.tsx:1:import { Button } from 
+"@/components/ui/Button";
+src\app\(protected)\dashboard\page.tsx:59:              <Button 
+variant="primary">View Exams</Button>
+src\app\(protected)\dashboard\page.tsx:62:              <Button 
+variant="outline">Study Materials</Button>
+src\app\(protected)\exams\page.tsx:2:import { Button } from 
+"@/components/ui/Button";
+src\app\(protected)\exams\page.tsx:34:          <Button 
+variant="primary">Continue Last Exam</Button>
+src\app\(protected)\exams\page.tsx:66:                <Button 
+variant="primary">View Sections</Button>
+src\app\(protected)\materials\page.tsx:1:import { Button } from 
+"@/components/ui/Button";
+src\app\(protected)\materials\page.tsx:50:                    <Button 
+variant="outline" className="px-4 py-2 text-sm">
+src\app\(protected)\materials\page.tsx:52:                    </Button>
+src\app\(protected)\profile\page.tsx:1:import { Button } from 
+"@/components/ui/Button";
+src\app\(protected)\profile\page.tsx:44:              <button 
+className="rounded-full bg-primary-600 px-4 py-2 text-sm 
+font-semibold">Enabled</button>
+src\app\(protected)\profile\page.tsx:51:              <button 
+className="rounded-full bg-gray-700 px-4 py-2 text-sm font-semibold 
+text-gray-300">Disabled</button>
+src\app\(protected)\profile\page.tsx:57:          <Button variant="primary" 
+className="px-6 py-3">
+src\app\(protected)\profile\page.tsx:59:          </Button>
+src\app\about\page.tsx:4:import { Button } from "@/components/ui/Button";
+src\app\about\page.tsx:69:              <Button variant="primary" 
+className="px-8 py-3">
+src\app\about\page.tsx:71:              </Button>
+src\app\contact\page.tsx:90:                <button
+src\app\contact\page.tsx:95:                </button>
+src\app\faq\page.tsx:73:              <button className="px-8 py-3 
+bg-primary-600 rounded-lg text-white hover:bg-primary-700 transition-colors">
+src\app\faq\page.tsx:75:              </button>
+src\app\login\page.tsx:5:import { Button } from "@/components/ui/Button";
+src\app\login\page.tsx:56:          <button
+src\app\login\page.tsx:62:          </button>
+src\app\pricing\page.tsx:4:import { Button } from "@/components/ui/Button";
+src\app\pricing\page.tsx:74:                    <Button variant={plan.variant 
+as "primary" | "outline"} className="w-full">
+src\app\pricing\page.tsx:76:                    </Button>
+src\app\signup\page.tsx:5:import { Button } from "@/components/ui/Button";
+src\app\signup\page.tsx:88:          <button
+src\app\signup\page.tsx:94:          </button>
+src\components\exam\ExamCard.tsx:25:      <button className="w-full px-4 py-2 
+bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors">
+src\components\exam\ExamCard.tsx:27:      </button>
+src\components\exam\ExamView.tsx:100:            <button
+src\components\exam\ExamView.tsx:101:              onClick={goToPrevious}
+src\components\exam\ExamView.tsx:106:            </button>
+src\components\exam\ExamView.tsx:110:            <button
+src\components\exam\ExamView.tsx:111:              onClick={goToNext}
+src\components\exam\ExamView.tsx:122:            </button>
+src\components\exam\ExamView.tsx:168:                      <button
+src\components\exam\ExamView.tsx:169:                        
+onClick={goToPrevious}
+src\components\exam\ExamView.tsx:177:                      </button>
+src\components\exam\ExamView.tsx:179:                        <button
+src\components\exam\ExamView.tsx:180:                          onClick={() =>
+src\components\exam\ExamView.tsx:194:                        </button>
+src\components\exam\ExamView.tsx:195:                        <button
+src\components\exam\ExamView.tsx:196:                          
+onClick={goToNext}
+src\components\exam\ExamView.tsx:209:                        </button>
+src\components\exam\ExamView.tsx:276:                            <button
+src\components\exam\ExamView.tsx:278:                              onClick={() 
+=> {
+src\components\exam\ExamView.tsx:285:                            </button>
+src\components\exam\Test.tsx:153:                  {/* ✅ Action Buttons */}
+src\components\exam\Test.tsx:155:                    <button
+src\components\exam\Test.tsx:156:                      onClick={() => 
+clearAnswer(currentQuestion.id)}
+src\components\exam\Test.tsx:160:                    </button>
+src\components\exam\Test.tsx:162:                      <button
+src\components\exam\Test.tsx:163:                        onClick={() => 
+toggleMarkReview(currentQuestion.id)}
+src\components\exam\Test.tsx:173:                      </button>
+src\components\exam\Test.tsx:174:                      <button
+src\components\exam\Test.tsx:175:                        onClick={goToPrevious}
+src\components\exam\Test.tsx:179:                      </button>
+src\components\exam\Test.tsx:180:                      <button
+src\components\exam\Test.tsx:181:                        onClick={goToNext}
+src\components\exam\Test.tsx:185:                      </button>
+src\components\exam\Test.tsx:237:                            <button
+src\components\exam\Test.tsx:239:                              onClick={() => {
+src\components\exam\Test.tsx:247:                            </button>
+src\components\home\CallToAction.tsx:2:import { Button } from 
+"@/components/ui/Button";
+src\components\home\CallToAction.tsx:18:              <Button
+src\components\home\CallToAction.tsx:23:              </Button>
+src\components\home\CallToAction.tsx:26:              <Button
+src\components\home\CallToAction.tsx:31:              </Button>
+src\components\home\FeaturesSection.tsx:77:            <button
+src\components\home\FeaturesSection.tsx:79:              onClick={() => 
+setCurrentFeature(index)}
+src\components\home\HeroSection.tsx:2:import { Button } from 
+"@/components/ui/Button";
+src\components\home\HeroSection.tsx:20:              <Button
+src\components\home\HeroSection.tsx:25:              </Button>
+src\components\home\HeroSection.tsx:28:              <Button
+src\components\home\HeroSection.tsx:33:              </Button>
+src\components\layout\Header.tsx:2:import { Button } from 
+"@/components/ui/Button";
+src\components\layout\Header.tsx:49:          {/* Auth Buttons */}
+src\components\layout\Header.tsx:58:              <Button variant="primary" 
+className="px-4 py-2">
+src\components\layout\Header.tsx:60:              </Button>
+src\components\layout\PrivateHeader.tsx:37:              <button
+src\components\layout\PrivateHeader.tsx:38:                onClick={() => 
+setIsNotificationsOpen(true)}
+src\components\layout\PrivateHeader.tsx:59:              </button>
+src\components\ui\Accordian.tsx:22:      <button
+src\components\ui\Accordian.tsx:26:        onClick={() => setIsOpen(!isOpen)}
+src\components\ui\Accordian.tsx:30:      </button>
+src\components\ui\Button.tsx:3:import type { ButtonHTMLAttributes, ReactNode } 
+from "react";
+src\components\ui\Button.tsx:5:interface ButtonProps extends 
+ButtonHTMLAttributes<HTMLButtonElement> {
+src\components\ui\Button.tsx:12:export function Button({
+src\components\ui\Button.tsx:20:}: ButtonProps) {
+src\components\ui\Button.tsx:41:    <button
+src\components\ui\Button.tsx:73:    </button>
+src\components\ui\Dropdown.tsx:55:  const handleOptionClick = (optionValue: 
+string) => {
+src\components\ui\Dropdown.tsx:62:      {/* Trigger Button */}
+src\components\ui\Dropdown.tsx:63:      <button
+src\components\ui\Dropdown.tsx:64:        type="button"
+src\components\ui\Dropdown.tsx:65:        onClick={() => !disabled && 
+setIsOpen(!isOpen)}
+src\components\ui\Dropdown.tsx:102:      </button>
+src\components\ui\Dropdown.tsx:109:              <button
+src\components\ui\Dropdown.tsx:111:                type="button"
+src\components\ui\Dropdown.tsx:112:                onClick={() =>
+src\components\ui\Dropdown.tsx:113:                  !option.disabled && 
+handleOptionClick(option.value)
+src\components\ui\Dropdown.tsx:129:              </button>
+src\components\Error.tsx:39:              <button
+src\components\Error.tsx:40:                onClick={() => 
+window.location.reload()}
+src\components\Error.tsx:44:              </button>
+src\components\NotFound.tsx:33:                <button className="block w-full 
+px-6 py-3 bg-primary-600 text-white font-medium rounded-lg 
+hover:bg-primary-700 transition-colors text-center">
+src\components\NotFound.tsx:35:                </button>
+src\components\NotFound.tsx:37:              <button
+src\components\NotFound.tsx:38:                onClick={() => 
+window.history.back()}
+src\components\NotFound.tsx:42:              </button>
+src\components\Notifications.tsx:14:          onClick={onClose}
+src\components\Notifications.tsx:24:            <button
+src\components\Notifications.tsx:25:              onClick={onClose}
+src\components\Notifications.tsx:42:            </button>
+src\components\ProUpgrade.tsx:2:import { Button } from 
+"@/components/ui/Button";
+src\components\ProUpgrade.tsx:20:          <Button variant="primary" 
+className="w-full text-sm">
+src\components\ProUpgrade.tsx:22:          </Button>
+src\components\Sidebar.tsx:6:import { Button } from "@/components/ui/Button";
+src\components\Sidebar.tsx:25:      <button
+src\components\Sidebar.tsx:26:        onClick={() => setIsOpen(!isOpen)}
+src\components\Sidebar.tsx:53:      </button>
+src\components\Sidebar.tsx:216:        {/* Logout Button */}
+src\components\Sidebar.tsx:218:          <Button
+src\components\Sidebar.tsx:219:            onClick={handleLogout}
+src\components\Sidebar.tsx:238:          </Button>
+
+

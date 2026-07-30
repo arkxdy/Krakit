@@ -1,0 +1,12 @@
+﻿
+Path                                                                 LineNumber
+----                                                                 ----------
+D:\Projects\Krakit\apps\krakit-live\src\components\Error.tsx                 39
+D:\Projects\Krakit\apps\krakit-live\src\components\NotFound.tsx              33
+D:\Projects\Krakit\apps\krakit-live\src\components\NotFound.tsx              37
+D:\Projects\Krakit\apps\krakit-live\src\components\Notifications.tsx         24
+D:\Projects\Krakit\apps\krakit-live\src\components\ProUpgrade.tsx            20
+D:\Projects\Krakit\apps\krakit-live\src\components\Sidebar.tsx               25
+D:\Projects\Krakit\apps\krakit-live\src\components\Sidebar.tsx              218
+
+
